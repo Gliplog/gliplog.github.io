@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Script-free by policy: this site shares an origin with the app at /app/, so any script here
+      could read the app's on-device data. No scripts, no service worker, no third-party requests.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>Tidebook: a private GLP-1 journal</title>
+    <meta
+      name="description"
+      content="Free, private and offline. Log GLP-1 doses and weight, follow your BMI, and see your progress beside the clinical trials. Everything stays on your phone."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="Tidebook home">
+          <img src="assets/favicon.svg" alt="" width="36" height="36" />
+          <span>Tide<span class="brand__accent">book</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Site">
+          <a class="optional" href="#features">Features</a>
+          <a class="optional" href="#privacy">Privacy</a>
+          <a href="#install">Install</a>
+          <a href="app/">Open app</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <div class="stack--loose stack">
+            <p class="eyebrow">Free · Private · Offline</p>
+            <h1>A calm, private journal for your GLP‑1 medicine.</h1>
+            <p class="lead">
+              Log your doses and your weight, follow your BMI, and see how your progress sits beside
+              the clinical trials. Everything stays on your phone.
+            </p>
+            <div class="actions">
+              <a class="button button--primary" href="app/">Open Tidebook</a>
+              <a class="button button--quiet" href="#install">Add it to your phone</a>
+            </div>
+            <ul class="badges" aria-label="Works with">
+              <li>Brand-name pens and tablets</li>
+              <li>Compounded semaglutide and tirzepatide</li>
+              <li>kg or lb, cm or ft and in</li>
+            </ul>
+          </div>
+          <div class="phones">
+            <picture class="phone">
+              <source
+                srcset="assets/screens/today-dark.webp"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="assets/screens/today-light.webp"
+                width="540"
+                height="1099"
+                alt="Tidebook's Today screen: when the next dose is due, the latest weight, change since starting, and BMI"
+              />
+            </picture>
+            <picture class="phone">
+              <source
+                srcset="assets/screens/progress-dark.webp"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="assets/screens/progress-light.webp"
+                width="540"
+                height="1099"
+                alt="Tidebook's Progress screen: weight over time with a goal line"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section section--band">
+        <div class="wrap">
+          <div class="section-head stack">
+            <p class="eyebrow">What it does</p>
+            <h2>Everything you want to keep track of, nothing you don't.</h2>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <h3>Doses, in two taps</h3>
+              <p class="muted">
+                Pick the dose from your medicine's label strengths, note the injection site if you
+                like, and see when your next dose falls.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Weight and BMI over time</h3>
+              <p class="muted">
+                Weigh in whenever suits you. Add your height to follow your BMI, explained plainly,
+                with an optional goal line.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Beside the clinical trials</h3>
+              <p class="muted">
+                See your change since your first dose next to the published averages from STEP,
+                SURMOUNT, SURPASS and more, each linked to its prescribing label.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Medicine in your body</h3>
+              <p class="muted">
+                An estimate of how much medicine remains between doses, from the published
+                half-life. Switch brands and the curve carries on.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Compounded vials made simple</h3>
+              <p class="muted">
+                Enter your vial's strength once and every dose also shows the units to draw on a
+                U-100 syringe.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Made for everyone</h3>
+              <p class="muted">
+                Every profile field is optional, gender is your own word for it, and nothing praises
+                or judges a number on the scale.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap split">
+          <picture class="phone">
+            <source srcset="assets/screens/trials-dark.webp" media="(prefers-color-scheme: dark)" />
+            <img
+              src="assets/screens/trials-light.webp"
+              width="540"
+              height="1099"
+              loading="lazy"
+              alt="A trial comparison card: your change at week 19 beside the STEP 1 averages for placebo and semaglutide 2.4 mg at week 68"
+            />
+          </picture>
+          <div class="stack">
+            <p class="eyebrow">Honest numbers</p>
+            <h2>Every figure shows where it came from.</h2>
+            <ul class="checks">
+              <li>
+                Trial results are copied exactly as printed in each medicine's US prescribing
+                information, with a link to the label.
+              </li>
+              <li>
+                Only the published endpoints are shown. Tidebook never draws a made-up curve between
+                them.
+              </li>
+              <li>
+                Trials are a reference, not a target: averages hide how widely people vary, and
+                yours will be your own.
+              </li>
+              <li>
+                Tidebook never tells you what dose to take. That's between you and your prescriber.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="section section--band">
+        <div class="wrap split">
+          <div class="stack">
+            <p class="eyebrow">Private by design</p>
+            <h2>Your health data never leaves your phone.</h2>
+            <p class="muted">
+              Tidebook has no account, no server and no analytics. It runs entirely on your device,
+              works with no connection, and the Android app doesn't even ask for network access.
+            </p>
+            <p class="muted">
+              Your only copy is on your phone, so save a backup file now and then from Settings. You
+              can erase everything there too, any time.
+            </p>
+            <p><a href="privacy.html">Read the privacy policy</a></p>
+          </div>
+          <ul class="checks">
+            <li>No sign-up, email or phone number</li>
+            <li>No tracking, ads or third-party code</li>
+            <li>Works offline after the first visit</li>
+            <li>Free, with no paywall</li>
+            <li>Open source, so anyone can check</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="medicines" class="section">
+        <div class="wrap">
+          <div class="section-head stack">
+            <p class="eyebrow">Medicines</p>
+            <h2>Works with the GLP‑1 you take.</h2>
+            <p class="muted">
+              Brand-name pens and tablets, compounded vials, or anything else you name yourself.
+            </p>
+          </div>
+          <div class="meds">
+            <dl class="card">
+              <dt>Semaglutide injections</dt>
+              <dd>Ozempic, Wegovy, compounded semaglutide</dd>
+            </dl>
+            <dl class="card">
+              <dt>Tirzepatide injections</dt>
+              <dd>Mounjaro, Zepbound, compounded tirzepatide</dd>
+            </dl>
+            <dl class="card">
+              <dt>Daily tablets</dt>
+              <dd>Wegovy tablets, Rybelsus, Ozempic tablets, Foundayo (orforglipron)</dd>
+            </dl>
+          </div>
+          <p class="small muted spaced">
+            Brand names are the trademarks of their respective owners and are used only to identify
+            the medicines. Tidebook is not affiliated with, endorsed by or sponsored by Novo
+            Nordisk, Eli Lilly or any other manufacturer or pharmacy.
+          </p>
+        </div>
+      </section>
+
+      <section id="install" class="section section--band">
+        <div class="wrap">
+          <div class="section-head stack">
+            <p class="eyebrow">Get Tidebook</p>
+            <h2>Add it to your home screen in a few seconds.</h2>
+            <p class="muted">
+              Open <a href="app/">tidebook.github.io/app</a> on your phone, then add it to your home
+              screen. It opens full screen and works offline, like any other app.
+            </p>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Phone or tablet</th>
+                  <th scope="col">Steps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>iPhone or iPad, Safari</td>
+                  <td>Share, then Add to Home Screen</td>
+                </tr>
+                <tr>
+                  <td>iPhone or iPad, Chrome</td>
+                  <td>Share (in the address bar), then Add to Home Screen</td>
+                </tr>
+                <tr>
+                  <td>Android, Chrome or Edge</td>
+                  <td>Menu, then Install app (or Add to Home screen)</td>
+                </tr>
+                <tr>
+                  <td>Android, Firefox</td>
+                  <td>Menu, then Add app to Home screen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted spaced">
+            An Android app for Google Play and F-Droid is on its way, built from the same open
+            source code.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="wrap">
+          <div class="section-head stack">
+            <p class="eyebrow">Questions</p>
+            <h2>Good to know</h2>
+          </div>
+          <details>
+            <summary>Is Tidebook really free?</summary>
+            <p>
+              Yes. There's no subscription, no ads and no premium tier. It costs almost nothing to
+              run because there's no server.
+            </p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>
+              In your browser's storage on your device, or inside the Android app. Nothing is sent
+              anywhere. If you clear this site's data in your browser, or uninstall, it's gone, so
+              keep a backup file.
+            </p>
+          </details>
+          <details>
+            <summary>Can I move my data to a new phone?</summary>
+            <p>
+              Save a backup in Settings, move the file to the new phone, and restore it there. On
+              iPhone, Safari and the home-screen app keep separate data, so use a backup to move
+              between them too.
+            </p>
+          </details>
+          <details>
+            <summary>Does Tidebook tell me what dose to take?</summary>
+            <p>
+              No. It shows the strengths and schedules printed on each medicine's label as a
+              reference, and does the arithmetic for you. Your prescriber decides your dose.
+            </p>
+          </details>
+          <details>
+            <summary>Why don't tablets of semaglutide show a level chart?</summary>
+            <p>
+              Only about 1% to 2% of a semaglutide tablet is absorbed, and the share varies day to
+              day. An estimate from the tablet strength would be wrong, so Tidebook doesn't draw
+              one.
+            </p>
+          </details>
+          <details>
+            <summary>Is it medical advice?</summary>
+            <p>
+              No. Tidebook is a journal and a calculator. It isn't a medical device and doesn't
+              replace your prescriber, pharmacist or care team.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap stack">
+        <nav aria-label="Footer">
+          <a href="app/">Open the app</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="https://github.com/Tidebook/app" rel="noopener noreferrer">Source code</a>
+        </nav>
+        <p>
+          Tidebook is a free, open-source journal. It is not medical advice and does not recommend
+          doses. Ozempic, Wegovy and Rybelsus are trademarks of Novo Nordisk A/S. Mounjaro, Zepbound
+          and Foundayo are trademarks of Eli Lilly and Company. Tidebook is not affiliated with Novo
+          Nordisk or Eli Lilly.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
