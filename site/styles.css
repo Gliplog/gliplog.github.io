@@ -258,6 +258,13 @@ p {
   gap: 12px;
 }
 
+/* Stacked buttons on a phone share one width instead of wrapping at two. */
+@media (max-width: 559px) {
+  .actions .button {
+    flex: 1 1 100%;
+  }
+}
+
 .eyebrow {
   font-size: 0.8rem;
   font-weight: 700;
@@ -280,12 +287,16 @@ p {
   font-size: 0.9rem;
 }
 
-.stack > * + * {
-  margin-top: 16px;
+/* The container owns the spacing between its children, so a child's own margin reset can't
+   collapse it. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.stack--loose > * + * {
-  margin-top: 28px;
+.stack--loose {
+  gap: 28px;
 }
 
 /* Hero */
@@ -324,22 +335,32 @@ p {
   transform: translateY(32px);
 }
 
+/* Plain text with a tick, not pills: a pill reads as a button you can tap. */
 .badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  gap: 6px;
   padding: 0;
   margin: 0;
   list-style: none;
+  font-size: 0.95rem;
+  color: var(--tb-text-2);
 }
 
 .badges li {
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: var(--tb-radius-pill);
-  background: var(--tb-brand-soft);
-  color: var(--tb-brand-strong);
+  padding-left: 22px;
+  position: relative;
+}
+
+.badges li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.5em;
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid var(--tb-brand);
+  border-bottom: 2px solid var(--tb-brand);
+  transform: rotate(-45deg);
 }
 
 /* Sections */
