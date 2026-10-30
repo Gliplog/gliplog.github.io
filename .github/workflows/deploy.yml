@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Publishes site/ at https://gliplog.github.io/. The app is the separate Gliplog/app
+# Publishes site/ at https://gliplog.com/. The app is the separate Gliplog/app
 # repository, which Pages serves at /app/ on the same origin.
 on:
   push:

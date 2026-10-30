@@ -1,8 +1,8 @@
 # gliplog.github.io
 
-The project site for [Gliplog](https://gliplog.github.io/), a free, private, and offline GLP-1
+The project site for [Gliplog](https://gliplog.com/), a free, private, and offline GLP-1
 journal. The app itself lives in [Gliplog/app](https://github.com/Gliplog/app) and is served
-at [gliplog.github.io/app](https://gliplog.github.io/app/).
+at [gliplog.com/app](https://gliplog.com/app/).
 
 ## What is here
 
@@ -14,7 +14,7 @@ at [gliplog.github.io/app](https://gliplog.github.io/app/).
 
 ## Rules
 
-The site shares the `gliplog.github.io` origin with the app, so:
+The site shares the `gliplog.com` origin with the app, so:
 
 - **No scripts, ever.** Every page carries a CSP with `script-src 'none'`. A script here could
   read the app's on-device data.
