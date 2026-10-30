@@ -8,7 +8,12 @@ const root = new URL('..', import.meta.url).pathname
 const site = join(root, 'site')
 const EM = '—'
 /** External hosts the site may link to; it never loads anything from them. */
-const ALLOWED_HOSTS = new Set(['github.com', 'docs.github.com', 'dailymed.nlm.nih.gov'])
+const ALLOWED_HOSTS = new Set([
+  'github.com',
+  'docs.github.com',
+  'dailymed.nlm.nih.gov',
+  'pepcalc.github.io',
+])
 /** Paths served by the app repository, not this one. */
 const APP_PATHS = /^(\/app\/|app\/)/
 
