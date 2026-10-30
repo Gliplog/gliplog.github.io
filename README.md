@@ -1,6 +1,6 @@
 # tidebook.github.io
 
-The project site for [Tidebook](https://tidebook.github.io/), a free, private and offline GLP-1
+The project site for [Tidebook](https://tidebook.github.io/), a free, private, and offline GLP-1
 journal. The app itself lives in [Tidebook/app](https://github.com/Tidebook/app) and is served
 at [tidebook.github.io/app](https://tidebook.github.io/app/).
 
@@ -23,7 +23,7 @@ The site shares the `tidebook.github.io` origin with the app, so:
   are plain links, never loaded resources.
 
 `npm run check` enforces all three, plus working internal links and anchors, image alt text,
-formatting and the no-em-dash rule.
+formatting, and the no-em-dash rule.
 
 ## Development
 
@@ -41,7 +41,9 @@ make check
 This repository must be named `tidebook.github.io` in the `Tidebook` organisation. In its
 settings, under Pages, set the source to **GitHub Actions**, then push to `main`.
 
-Screenshots in `site/assets/screens/` come from the app with sample data, never real records.
+Screenshots in `site/assets/screens/` come from the app with sample data, never real records. To
+retake the Today pair, run `make screenshots` in the app repository; its `site-screenshots`
+skill has the steps.
 
 ## License
 
