@@ -1,8 +1,8 @@
-# tidebook.github.io
+# gliplog.github.io
 
-The project site for [Tidebook](https://tidebook.github.io/), a free, private, and offline GLP-1
-journal. The app itself lives in [Tidebook/app](https://github.com/Tidebook/app) and is served
-at [tidebook.github.io/app](https://tidebook.github.io/app/).
+The project site for [Gliplog](https://gliplog.github.io/), a free, private, and offline GLP-1
+journal. The app itself lives in [Gliplog/app](https://github.com/Gliplog/app) and is served
+at [gliplog.github.io/app](https://gliplog.github.io/app/).
 
 ## What is here
 
@@ -14,7 +14,7 @@ at [tidebook.github.io/app](https://tidebook.github.io/app/).
 
 ## Rules
 
-The site shares the `tidebook.github.io` origin with the app, so:
+The site shares the `gliplog.github.io` origin with the app, so:
 
 - **No scripts, ever.** Every page carries a CSP with `script-src 'none'`. A script here could
   read the app's on-device data.
@@ -38,7 +38,7 @@ make check
 
 ## Deploying
 
-This repository must be named `tidebook.github.io` in the `Tidebook` organisation. In its
+This repository must be named `gliplog.github.io` in the `Gliplog` organisation. In its
 settings, under Pages, set the source to **GitHub Actions**, then push to `main`.
 
 Screenshots in `site/assets/screens/` come from the app with sample data, never real records. To

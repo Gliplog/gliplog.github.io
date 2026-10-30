@@ -1,10 +1,10 @@
 {
-  "name": "tidebook-site",
+  "name": "gliplog-site",
   "private": true,
   "version": "0.1.0",
   "license": "AGPL-3.0-only",
   "type": "module",
-  "description": "The Tidebook project site at tidebook.github.io: static, script-free.",
+  "description": "The Gliplog project site at gliplog.github.io: static, script-free.",
   "engines": {
     "node": ">=24.16.0 <25"
   },

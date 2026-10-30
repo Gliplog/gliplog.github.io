@@ -1,5 +1,5 @@
 /*
- * Tidebook site styles. The tokens mirror the app's src/styles/tokens.css (warm paper, sea-teal
+ * Gliplog site styles. The tokens mirror the app's src/styles/tokens.css (warm paper, sea-teal
  * primary, terracotta accent, warm ink) so the site and the app read as one product. Dark mode
  * follows the device; the site ships no script, so there is no toggle.
  */
@@ -29,49 +29,49 @@
 
 :root {
   color-scheme: light dark;
-  --tb-font: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --tb-radius-md: 14px;
-  --tb-radius-lg: 20px;
-  --tb-radius-xl: 28px;
-  --tb-radius-pill: 999px;
-  --tb-gutter: 16px;
-  --tb-max: 1120px;
+  --gl-font: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --gl-radius-md: 14px;
+  --gl-radius-lg: 20px;
+  --gl-radius-xl: 28px;
+  --gl-radius-pill: 999px;
+  --gl-gutter: 16px;
+  --gl-max: 1120px;
 
-  --tb-bg: #fbf8f3;
-  --tb-surface: #fffdf9;
-  --tb-surface-2: #f4ede2;
-  --tb-text-1: #1d1a14;
-  --tb-text-2: #5f5544;
-  --tb-text-3: #7a6c54;
-  --tb-brand: #2d6567;
-  --tb-brand-strong: #234f51;
-  --tb-on-brand: #fbf8f3;
-  --tb-brand-soft: rgba(45, 101, 103, 0.12);
-  --tb-accent: #9a4f33;
-  --tb-divider: #e8ddcc;
-  --tb-shadow: 0 1px 1px rgba(45, 38, 26, 0.04), 0 8px 24px rgba(45, 38, 26, 0.07);
-  --tb-backdrop-1: rgba(116, 179, 174, 0.22);
-  --tb-backdrop-2: rgba(220, 141, 107, 0.16);
-  --tb-focus: #dc8d6b;
+  --gl-bg: #fbf8f3;
+  --gl-surface: #fffdf9;
+  --gl-surface-2: #f4ede2;
+  --gl-text-1: #1d1a14;
+  --gl-text-2: #5f5544;
+  --gl-text-3: #7a6c54;
+  --gl-brand: #2d6567;
+  --gl-brand-strong: #234f51;
+  --gl-on-brand: #fbf8f3;
+  --gl-brand-soft: rgba(45, 101, 103, 0.12);
+  --gl-accent: #9a4f33;
+  --gl-divider: #e8ddcc;
+  --gl-shadow: 0 1px 1px rgba(45, 38, 26, 0.04), 0 8px 24px rgba(45, 38, 26, 0.07);
+  --gl-backdrop-1: rgba(116, 179, 174, 0.22);
+  --gl-backdrop-2: rgba(220, 141, 107, 0.16);
+  --gl-focus: #dc8d6b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --tb-bg: #15120e;
-    --tb-surface: #221e18;
-    --tb-surface-2: #2c2820;
-    --tb-text-1: #f4ede2;
-    --tb-text-2: #d6c7af;
-    --tb-text-3: #b3a286;
-    --tb-brand: #74c3bd;
-    --tb-brand-strong: #a3e0db;
-    --tb-on-brand: #15120e;
-    --tb-brand-soft: rgba(116, 195, 189, 0.18);
-    --tb-accent: #ebb59b;
-    --tb-divider: #3a342a;
-    --tb-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
-    --tb-backdrop-1: rgba(58, 169, 166, 0.14);
-    --tb-backdrop-2: rgba(189, 89, 47, 0.12);
+    --gl-bg: #15120e;
+    --gl-surface: #221e18;
+    --gl-surface-2: #2c2820;
+    --gl-text-1: #f4ede2;
+    --gl-text-2: #d6c7af;
+    --gl-text-3: #b3a286;
+    --gl-brand: #74c3bd;
+    --gl-brand-strong: #a3e0db;
+    --gl-on-brand: #15120e;
+    --gl-brand-soft: rgba(116, 195, 189, 0.18);
+    --gl-accent: #ebb59b;
+    --gl-divider: #3a342a;
+    --gl-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --gl-backdrop-1: rgba(58, 169, 166, 0.14);
+    --gl-backdrop-2: rgba(189, 89, 47, 0.12);
   }
 }
 
@@ -87,13 +87,13 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--tb-font);
+  font-family: var(--gl-font);
   font-size: 1.0625rem;
   line-height: 1.6;
-  color: var(--tb-text-1);
+  color: var(--gl-text-1);
   background:
-    radial-gradient(60rem 36rem at 0% 0%, var(--tb-backdrop-1), transparent 70%),
-    radial-gradient(50rem 30rem at 100% 0%, var(--tb-backdrop-2), transparent 70%), var(--tb-bg);
+    radial-gradient(60rem 36rem at 0% 0%, var(--gl-backdrop-1), transparent 70%),
+    radial-gradient(50rem 30rem at 100% 0%, var(--gl-backdrop-2), transparent 70%), var(--gl-bg);
   background-repeat: no-repeat;
 }
 
@@ -104,13 +104,13 @@ img {
 }
 
 a {
-  color: var(--tb-brand);
+  color: var(--gl-brand);
   text-underline-offset: 0.18em;
 }
 
 a:focus-visible,
 .button:focus-visible {
-  outline: 3px solid var(--tb-focus);
+  outline: 3px solid var(--gl-focus);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -144,14 +144,14 @@ p {
 
 .wrap {
   width: 100%;
-  max-width: var(--tb-max);
+  max-width: var(--gl-max);
   margin: 0 auto;
-  padding: 0 var(--tb-gutter);
+  padding: 0 var(--gl-gutter);
 }
 
 @media (min-width: 720px) {
   :root {
-    --tb-gutter: 32px;
+    --gl-gutter: 32px;
   }
 }
 
@@ -164,7 +164,7 @@ p {
   left: 16px;
   top: 16px;
   z-index: 10;
-  background: var(--tb-surface);
+  background: var(--gl-surface);
   padding: 8px 12px;
 }
 
@@ -185,7 +185,7 @@ p {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--tb-text-1);
+  color: var(--gl-text-1);
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: -0.03em;
@@ -195,11 +195,11 @@ p {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  box-shadow: var(--tb-shadow);
+  box-shadow: var(--gl-shadow);
 }
 
 .brand__accent {
-  color: var(--tb-brand);
+  color: var(--gl-brand);
 }
 
 .site-nav {
@@ -210,12 +210,12 @@ p {
 }
 
 .site-nav a {
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
   text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: var(--tb-text-1);
+  color: var(--gl-text-1);
 }
 
 @media (max-width: 559px) {
@@ -231,25 +231,25 @@ p {
   justify-content: center;
   min-height: 48px;
   padding: 0 24px;
-  border-radius: var(--tb-radius-pill);
+  border-radius: var(--gl-radius-pill);
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
 }
 
 .button--primary {
-  background: var(--tb-brand);
-  color: var(--tb-on-brand);
+  background: var(--gl-brand);
+  color: var(--gl-on-brand);
 }
 
 .button--primary:hover {
-  background: var(--tb-brand-strong);
+  background: var(--gl-brand-strong);
 }
 
 .button--quiet {
-  border-color: var(--tb-divider);
-  color: var(--tb-text-1);
-  background: var(--tb-surface);
+  border-color: var(--gl-divider);
+  color: var(--gl-text-1);
+  background: var(--gl-surface);
 }
 
 .actions {
@@ -270,17 +270,17 @@ p {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--tb-accent);
+  color: var(--gl-accent);
 }
 
 .lead {
   font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
   max-width: 38ch;
 }
 
 .muted {
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
 }
 
 .small {
@@ -324,11 +324,11 @@ p {
 
 .phone {
   width: min(46%, 260px);
-  border-radius: var(--tb-radius-xl);
+  border-radius: var(--gl-radius-xl);
   overflow: hidden;
-  box-shadow: var(--tb-shadow);
-  border: 1px solid var(--tb-divider);
-  background: var(--tb-surface);
+  box-shadow: var(--gl-shadow);
+  border: 1px solid var(--gl-divider);
+  background: var(--gl-surface);
 }
 
 .phone:nth-child(2) {
@@ -343,7 +343,7 @@ p {
   margin: 0;
   list-style: none;
   font-size: 0.95rem;
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
 }
 
 .badges li {
@@ -358,8 +358,8 @@ p {
   top: 0.5em;
   width: 11px;
   height: 6px;
-  border-left: 2px solid var(--tb-brand);
-  border-bottom: 2px solid var(--tb-brand);
+  border-left: 2px solid var(--gl-brand);
+  border-bottom: 2px solid var(--gl-brand);
   transform: rotate(-45deg);
 }
 
@@ -369,7 +369,7 @@ p {
 }
 
 .section--band {
-  background: var(--tb-surface-2);
+  background: var(--gl-surface-2);
 }
 
 .section-head {
@@ -384,11 +384,11 @@ p {
 }
 
 .card {
-  background: var(--tb-surface);
-  border: 1px solid var(--tb-divider);
-  border-radius: var(--tb-radius-lg);
+  background: var(--gl-surface);
+  border: 1px solid var(--gl-divider);
+  border-radius: var(--gl-radius-lg);
   padding: 24px;
-  box-shadow: var(--tb-shadow);
+  box-shadow: var(--gl-shadow);
 }
 
 .card h3 {
@@ -432,8 +432,8 @@ p {
   top: 0.45em;
   width: 18px;
   height: 10px;
-  border-left: 3px solid var(--tb-brand);
-  border-bottom: 3px solid var(--tb-brand);
+  border-left: 3px solid var(--gl-brand);
+  border-bottom: 3px solid var(--gl-brand);
   transform: rotate(-45deg);
 }
 
@@ -453,7 +453,7 @@ p {
 
 .meds dd {
   margin: 0;
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
   font-size: 0.95rem;
 }
 
@@ -467,7 +467,7 @@ th,
 td {
   text-align: left;
   padding: 10px 8px;
-  border-bottom: 1px solid var(--tb-divider);
+  border-bottom: 1px solid var(--gl-divider);
   vertical-align: top;
 }
 
@@ -476,7 +476,7 @@ td {
 }
 
 details {
-  border-bottom: 1px solid var(--tb-divider);
+  border-bottom: 1px solid var(--gl-divider);
   padding: 16px 0;
 }
 
@@ -488,7 +488,7 @@ summary {
 
 details p {
   margin-top: 8px;
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
 }
 
 /* Long-form pages (privacy) */
@@ -510,9 +510,9 @@ details p {
 /* Footer */
 .site-footer {
   padding: 40px 0 56px;
-  border-top: 1px solid var(--tb-divider);
+  border-top: 1px solid var(--gl-divider);
   font-size: 0.9rem;
-  color: var(--tb-text-2);
+  color: var(--gl-text-2);
 }
 
 .site-footer nav {

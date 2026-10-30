@@ -1,7 +1,7 @@
-# tidebook.github.io
+# gliplog.github.io
 
-The static, script-free project site for Tidebook, published from `site/` to
-`https://tidebook.github.io/`. The app is the separate `Tidebook/app` repository at `/app/` on
+The static, script-free project site for Gliplog, published from `site/` to
+`https://gliplog.github.io/`. The app is the separate `Gliplog/app` repository at `/app/` on
 the same origin; its CLAUDE.md and front-end skill hold the design system this site mirrors.
 
 ## Commands
