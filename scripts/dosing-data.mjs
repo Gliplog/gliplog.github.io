@@ -516,12 +516,12 @@ export const MEDICINES = [
         when: 'Week 21',
         kind: 'keep',
         option: true,
-        note: 'At the earliest, if needed; the most for adults',
+        note: 'At the earliest, if needed; the highest dose',
       },
     ],
     weeksNote: 'Earliest week for each dose, from the first injection',
     maintenance:
-      'The label doesn’t name one ongoing dose: the dose goes up only if more blood sugar control is needed, so any of the doses can be the one someone stays on. 15 mg is the most for adults, and 10 mg for children 10 and older.',
+      'The label doesn’t name one ongoing dose: the dose goes up only if more blood sugar control is needed, so any of the doses can be the one someone stays on. 15 mg is the highest dose on the label.',
     goodToKnow: [
       'Each increase is 2.5 mg, after at least 4 weeks on the dose before, and only if more blood sugar control is needed.',
     ],
@@ -538,7 +538,7 @@ export const MEDICINES = [
       },
       {
         q: 'What is the highest dose of Mounjaro?',
-        a: '15 mg once a week for adults, and 10 mg for children 10 and older, according to the label.',
+        a: '15 mg once a week, according to the label.',
       },
       {
         q: 'What if I miss a Mounjaro dose?',
@@ -556,8 +556,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Daily injection',
     unit: 'week',
-    approvedFor:
-      'For weight reduction in adults, and in children 12 and older over 60 kg with obesity.',
+    approvedFor: 'For weight reduction in adults.',
     label: LABELS.saxenda,
     glance: {
       often: 'Daily',
@@ -577,7 +576,7 @@ export const MEDICINES = [
     ],
     weeksNote: 'Daily dose in each week, from the first injection',
     maintenance:
-      'For adults the label’s dose is 3 mg a day; it says the lower doses are for stepping up only. Children may take up to 8 weeks to step up.',
+      'For adults the label’s dose is 3 mg a day; it says the lower doses are for stepping up only.',
     goodToKnow: [
       'If a step isn’t tolerated, the label suggests considering waiting about one more week before the next.',
       'The label says to stop Saxenda if 3 mg isn’t tolerated, and to check weight at 16 weeks: it says to stop if weight hasn’t fallen by at least 4%. Your prescriber makes that call with you.',
