@@ -13,6 +13,9 @@ the same origin; its CLAUDE.md and front-end skill hold the design system this s
 | `make build`   | Rebuild `site/dosing/` and `site/sitemap.xml` from `scripts/dosing-data.mjs`   |
 | `make check`   | Prettier, generated pages up to date, then `scripts/check-site.mjs` (the gate) |
 
+Format with `make format` and run `make check` before calling a change done; CI runs the same
+gate on every push and pull request.
+
 ## Non-negotiables
 
 - No `<script>`, inline handlers, `style` attributes or service worker: the app shares this
