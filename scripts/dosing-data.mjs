@@ -54,7 +54,7 @@ const LABELS = {
 }
 
 const TABLET_TAKING =
-  'One tablet each morning on an empty stomach, swallowed whole with a little plain water (up to 4 ounces, about 120 mL). Wait at least 30 minutes before eating, drinking, or taking other medicines by mouth. Never more than one tablet a day.'
+  'One tablet each morning on an empty stomach, swallowed whole with up to 4 ounces (120 mL) of plain water. Wait 30 minutes before eating, drinking, or taking other pills. One tablet a day at most.'
 
 const SKIP_TABLET = 'Skip the missed tablet and take the next one the following day.'
 
@@ -88,8 +88,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Weekly injection',
     unit: 'week',
-    approvedFor:
-      'Approved for weight reduction and keeping it off, lowering the risk of major heart problems, and other uses on its label.',
+    approvedFor: 'For weight reduction, lowering heart risk, and other uses on its label.',
     label: LABELS.wegovy,
     glance: {
       often: 'Weekly',
@@ -157,7 +156,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Weekly injection',
     unit: 'week',
-    approvedFor: 'Approved for type 2 diabetes, and other uses on its label.',
+    approvedFor: 'For type 2 diabetes, and other uses on its label.',
     label: LABELS.ozempic,
     glance: {
       often: 'Weekly',
@@ -224,8 +223,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Daily tablet',
     unit: 'day',
-    approvedFor:
-      'Approved for weight reduction and keeping it off, and for lowering the risk of major heart problems.',
+    approvedFor: 'For weight reduction and lowering heart risk.',
     label: LABELS.wegovy,
     glance: {
       often: 'Daily',
@@ -280,7 +278,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Daily tablet',
     unit: 'day',
-    approvedFor: 'Approved for type 2 diabetes, and other uses on its label.',
+    approvedFor: 'For type 2 diabetes, and other uses on its label.',
     label: LABELS.rybelsus,
     glance: {
       often: 'Daily',
@@ -344,7 +342,7 @@ export const MEDICINES = [
     owner: NOVO,
     form: 'Daily tablet',
     unit: 'day',
-    approvedFor: 'Approved for type 2 diabetes, and other uses on its label.',
+    approvedFor: 'For type 2 diabetes, and other uses on its label.',
     label: LABELS.rybelsus,
     glance: {
       often: 'Daily',
@@ -404,8 +402,7 @@ export const MEDICINES = [
     owner: LILLY,
     form: 'Weekly injection',
     unit: 'week',
-    approvedFor:
-      'Approved for weight reduction and keeping it off, and for obstructive sleep apnea with obesity.',
+    approvedFor: 'For weight reduction, and for obstructive sleep apnea with obesity.',
     label: LABELS.zepbound,
     glance: {
       often: 'Weekly',
@@ -491,7 +488,7 @@ export const MEDICINES = [
     owner: LILLY,
     form: 'Weekly injection',
     unit: 'week',
-    approvedFor: 'Approved for type 2 diabetes, and other uses on its label.',
+    approvedFor: 'For type 2 diabetes, and other uses on its label.',
     label: LABELS.mounjaro,
     glance: {
       often: 'Weekly',
@@ -560,7 +557,7 @@ export const MEDICINES = [
     form: 'Daily injection',
     unit: 'week',
     approvedFor:
-      'Approved for weight management in adults, and in children 12 and older who weigh more than 60 kg and have obesity.',
+      'For weight reduction in adults, and in children 12 and older over 60 kg with obesity.',
     label: LABELS.saxenda,
     glance: {
       often: 'Daily',
@@ -613,7 +610,7 @@ export const MEDICINES = [
     owner: LILLY,
     form: 'Daily tablet',
     unit: 'day',
-    approvedFor: 'Approved for weight reduction and keeping it off, in adults.',
+    approvedFor: 'For weight reduction in adults.',
     label: LABELS.foundayo,
     glance: {
       often: 'Daily',

@@ -198,7 +198,7 @@ function medicinePage(m) {
 </nav>
 <p class="eyebrow">${esc(m.generic)} · ${esc(m.form.toLowerCase())}</p>
 <h1>${esc(m.fullName)} dose schedule</h1>
-<p class="small muted">From the US prescribing information, revised ${m.label.revised} · Last checked against the label ${CHECKED}</p>
+<p class="small muted">US label revised ${m.label.revised} · Checked ${CHECKED}</p>
 <div class="card quick stack">
 <p class="eyebrow">Quick answer</p>
 <p>${esc(m.quick)}</p>
@@ -210,7 +210,7 @@ function medicinePage(m) {
 <div class="wrap stack--loose stack">
 <div class="section-head stack">
 <h2 id="schedule">${esc(m.fullName)} titration schedule</h2>
-<p class="muted">${esc(m.approvedFor)} Your prescriber decides your dose and when to change it.</p>
+<p class="muted">${esc(m.approvedFor)}</p>
 </div>
 <div class="dosing-grid">
 <div class="card stack">
@@ -262,7 +262,7 @@ ${m.faq.map((f) => `<details>\n<summary>${esc(f.q)}</summary>\n<p>${esc(f.a)}</p
 ${related.map((r) => `<li><a href="/dosing/${r.slug}.html">${esc(r.fullName)} dose schedule</a></li>`).join('\n')}
 <li><a href="/dosing/">All dosing schedules</a></li>
 </ul>
-<p class="small muted spaced">Source: <a href="${m.label.url}" rel="noopener noreferrer">${esc(m.label.title)}</a> US prescribing information, section 2, revised ${m.label.revised}. Labels change; the linked label is the one that counts. This page summarises the label for adults and is not medical advice. Gliplog never recommends a dose: talk to your prescriber or pharmacist about yours.</p>
+<p class="small muted spaced">Source: <a href="${m.label.url}" rel="noopener noreferrer">${esc(m.label.title)}</a> US prescribing information, section 2 (revised ${m.label.revised}). Not medical advice; Gliplog never recommends a dose. Ask your prescriber or pharmacist.</p>
 </div>
 </section>`
   return page({ title, description, path, type: 'article', body })
@@ -291,10 +291,10 @@ ${meds
     (m) => `<article id="${m.slug}" class="card stack">
 <div>
 <h3><a href="/dosing/${m.slug}.html">${esc(m.fullName)}</a></h3>
-<p class="small muted">${esc(m.generic)} · ${esc(m.form.toLowerCase())}. ${esc(chartNote(m))}</p>
+<p class="small muted">${esc(m.generic)} · ${esc(m.form.toLowerCase())}</p>
 </div>
 ${ladder(m)}
-<p><a href="/dosing/${m.slug}.html">${esc(m.fullName)} schedule, missed doses and questions</a></p>
+<p><a href="/dosing/${m.slug}.html">Full ${esc(m.fullName)} schedule</a></p>
 </article>`,
   )
   .join('\n')}
@@ -322,8 +322,8 @@ ${legend(meds)}
 <div class="wrap stack">
 <p class="eyebrow">From the US prescribing information</p>
 <h1>GLP‑1 dosing schedules</h1>
-<p class="lead lead--wide">How semaglutide, tirzepatide and other GLP‑1 medicines are started and stepped up, as printed on each medicine’s label. It’s here for reference: your prescriber decides your dose and when to change it.</p>
-<p class="small muted">Last checked against the labels ${CHECKED}</p>
+<p class="lead lead--wide">Starting doses and step-ups from each medicine’s US label. For reference only: your prescriber sets your dose.</p>
+<p class="small muted">Checked against the labels ${CHECKED}</p>
 <nav class="jump" aria-label="On this page">
 <a href="#at-a-glance">At a glance</a>
 ${GROUPS.map((g) => `<a href="#${g.id}">${esc(g.title)}</a>`).join('\n')}
@@ -338,7 +338,7 @@ ${GROUPS.map((g) => `<a href="#${g.id}">${esc(g.title)}</a>`).join('\n')}
 <div class="wrap">
 <div class="section-head stack">
 <h2>At a glance</h2>
-<p class="muted">Every schedule starts low and steps up slowly, which the labels say helps with stomach side effects. Doses in mg are not comparable between medicines, or between tablets and injections.</p>
+<p class="muted">Doses in mg can’t be compared between medicines, or between tablets and injections.</p>
 </div>
 <div class="table-scroll">
 <table class="table--wide">
@@ -348,7 +348,7 @@ ${glance}
 </tbody>
 </table>
 </div>
-<p class="small muted spaced">Highest doses are for adults. Wegovy 7.2 mg (Wegovy HD) is for weight reduction in adults who have taken 2.4 mg for at least 4 weeks.</p>
+<p class="small muted spaced">Highest doses are for adults. Wegovy 7.2 mg (Wegovy HD) follows at least 4 weeks on 2.4 mg.</p>
 </div>
 </section>
 
@@ -358,7 +358,7 @@ ${groups}
 <div class="wrap">
 <div class="section-head stack">
 <h2>Missed doses</h2>
-<p class="muted">What each label says to do, in its own terms.</p>
+<p class="muted">From each label.</p>
 </div>
 <div class="table-scroll">
 <table>
@@ -375,8 +375,8 @@ ${missed}
 <div class="wrap split split--top">
 <div class="stack">
 <h2>Compounded semaglutide and tirzepatide</h2>
-<p class="muted">Compounded vials are made by pharmacies and are not FDA-approved, so they have no label of their own. Follow the instructions from your prescriber and pharmacy. The brand schedules above are often used as a reference, in milligrams.</p>
-<p class="muted">A vial’s strength (mg per mL) decides how many units of a syringe make a dose, and it differs between pharmacies. Gliplog works out the units to draw on a U‑100 syringe from your vial’s strength.</p>
+<p class="muted">Pharmacy-made vials aren’t FDA-approved and have no label. Follow your prescriber and pharmacy; the brand schedules above are a common reference.</p>
+<p class="muted">The units to draw depend on your vial’s strength in mg per mL. Gliplog works them out for a U‑100 syringe.</p>
 </div>
 <div class="card stack">
 <h3>Log your doses in Gliplog</h3>
@@ -394,12 +394,12 @@ ${missed}
 <div class="wrap">
 <div class="section-head stack">
 <h2>Sources</h2>
-<p class="muted">Each schedule is from section 2 (Dosage and Administration) of the medicine’s US prescribing information on DailyMed. Labels change; the linked label is the one that counts.</p>
+<p class="muted">From section 2 of each US prescribing label on DailyMed. If a label changes, the label is right.</p>
 </div>
 <ul class="sources">
 ${sources}
 </ul>
-<p class="small muted spaced">These pages summarise the labels for adults and are not medical advice. They don’t cover every use, warning, or patient group on the labels. Gliplog never recommends a dose: talk to your prescriber or pharmacist about yours.</p>
+<p class="small muted spaced">A summary of each label’s adult dosing, not medical advice. Gliplog never recommends a dose; ask your prescriber or pharmacist.</p>
 </div>
 </section>`
   return page({
