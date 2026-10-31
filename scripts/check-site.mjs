@@ -1,6 +1,8 @@
 // The site's gate. It shares an origin with the app at /app/, so it must stay script-free:
 // any script here could read the app's IndexedDB, and a service worker here would control /app/.
-// Also checks links, anchors, image alt text and the markdown em-dash rule.
+// Also checks links, anchors, image alt text, the markdown em-dash rule, and the tags search
+// engines and link previews read: every indexable page has a description, a canonical URL on
+// gliplog.com matching its path, Open Graph and Twitter card tags, and a sitemap entry.
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { dirname, join, relative } from 'node:path'
 
@@ -16,6 +18,22 @@ const ALLOWED_HOSTS = new Set([
 ])
 /** Paths served by the app repository, not this one. */
 const APP_PATHS = /^(\/app\/|app\/)/
+const ORIGIN = 'https://gliplog.com'
+const SEO_PROPERTIES = ['og:title', 'og:description', 'og:url', 'og:image', 'og:type']
+
+/** The public URL path of a page file: index.html is its directory. */
+function urlPathOf(file) {
+  const rel = '/' + relative(site, file).split('\\').join('/')
+  return rel.endsWith('/index.html') ? rel.slice(0, -'index.html'.length) : rel
+}
+
+const sitemapXml = existsSync(join(site, 'sitemap.xml'))
+  ? readFileSync(join(site, 'sitemap.xml'), 'utf8')
+  : ''
+const sitemapPaths = new Set(
+  [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(ORIGIN, '')),
+)
+const indexable = new Set()
 
 function* walk(dir) {
   for (const name of readdirSync(dir)) {
@@ -50,13 +68,36 @@ for (const page of pages) {
   if (!/<html lang="/.test(html)) fail(page, 'html has no lang')
   if (!/<title>[^<]+<\/title>/.test(html)) fail(page, 'has no title')
 
+  const path = urlPathOf(page)
+  const meta = (attr, name) =>
+    new RegExp(`<meta\\s+${attr}="${name}"\\s+content="([^"]+)"`).exec(html)?.[1]
+  if (/<meta\s+name="robots"\s+content="[^"]*noindex/.test(html)) {
+    if (sitemapPaths.has(path)) fail(page, 'is noindex but listed in sitemap.xml')
+  } else {
+    indexable.add(path)
+    const canonical = /<link\s+rel="canonical"\s+href="([^"]+)"/.exec(html)?.[1]
+    if (canonical !== ORIGIN + path) fail(page, `canonical should be ${ORIGIN + path}`)
+    if (!meta('name', 'description')) fail(page, 'has no meta description')
+    for (const property of SEO_PROPERTIES) {
+      if (!meta('property', property)) fail(page, `has no ${property}`)
+    }
+    if (meta('property', 'og:url') !== canonical) fail(page, 'og:url differs from the canonical')
+    if (!meta('name', 'twitter:card')) fail(page, 'has no twitter:card')
+    if (!sitemapPaths.has(path)) fail(page, 'is missing from sitemap.xml')
+  }
+
   for (const m of html.matchAll(/<img\b[^>]*>/g)) {
     if (!/\salt="/.test(m[0])) fail(page, `image without alt: ${m[0].slice(0, 60)}`)
   }
 
   const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]))
-  for (const m of html.matchAll(/\s(?:href|src|srcset)="([^"]+)"/g)) {
-    const url = m[1]
+  const urls = [
+    ...[...html.matchAll(/\s(?:href|src|srcset)="([^"]+)"/g)].map((m) => m[1]),
+    meta('property', 'og:image'),
+  ].filter(Boolean)
+  for (const raw of urls) {
+    // The site's own absolute URLs (canonical, og:image) must resolve to files here.
+    const url = raw.startsWith(ORIGIN + '/') ? raw.slice(ORIGIN.length) : raw
     if (url.startsWith('#')) {
       if (!ids.has(url.slice(1))) fail(page, `anchor ${url} has no target`)
       continue
@@ -77,6 +118,10 @@ for (const page of pages) {
     const resolved = path === '' || path.endsWith('/') ? join(target, 'index.html') : target
     if (!existsSync(resolved)) fail(page, `broken link ${url}`)
   }
+}
+
+for (const path of sitemapPaths) {
+  if (!indexable.has(path)) fail(join(site, 'sitemap.xml'), `lists ${path}, which is not a page`)
 }
 
 if (failures.length) {

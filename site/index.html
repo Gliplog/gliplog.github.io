@@ -17,6 +17,21 @@
       name="description"
       content="A free, private GLP-1 journal that works offline. Log doses, weight, blood sugar, and side effects, and see how your progress compares with the clinical trials."
     />
+    <link rel="canonical" href="https://gliplog.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gliplog" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Gliplog: a private GLP-1 journal" />
+    <meta
+      property="og:description"
+      content="A free, private GLP-1 journal that works offline. Log doses, weight, blood sugar, and side effects, and see how your progress compares with the clinical trials."
+    />
+    <meta property="og:url" content="https://gliplog.com/" />
+    <meta property="og:image" content="https://gliplog.com/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gliplog: a private GLP-1 journal" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)" />
@@ -36,7 +51,8 @@
         <nav class="site-nav" aria-label="Site">
           <a class="optional" href="#features">Features</a>
           <a class="optional" href="#privacy">Privacy</a>
-          <a href="#install">Install</a>
+          <a href="dosing/">Dosing</a>
+          <a class="optional" href="#install">Install</a>
           <a href="app/">Open app</a>
         </nav>
       </div>
@@ -227,6 +243,16 @@
               <dd>Wegovy tablets, Rybelsus, Ozempic tablets, Foundayo (orforglipron)</dd>
             </dl>
           </div>
+          <div class="card callout spaced">
+            <div class="stack">
+              <h3>Dosing schedules, from the label</h3>
+              <p class="muted">
+                Starting doses, step-ups, and what to do about a missed dose for Wegovy, Ozempic,
+                Rybelsus, Zepbound, Mounjaro, Saxenda, and Foundayo, as printed in each US label.
+              </p>
+            </div>
+            <a class="button button--quiet" href="dosing/">See dosing schedules</a>
+          </div>
           <p class="small muted spaced">
             Brand names are the trademarks of their respective owners and are used only to identify
             the medicines. Gliplog is not affiliated with, endorsed by, or sponsored by Novo
@@ -317,8 +343,9 @@
             <summary>Can I share my journal with my doctor?</summary>
             <p>
               Yes. On the Progress screen, export a PDF report of your medicines, weight, blood
-              sugar, side effects, and doses for the last 30 days, the last 90 days, or everything.
-              It's made on your device and goes only where you send it.
+              sugar, side effects, and doses for the last 30 days, the last 90 days, or everything,
+              with charts of your trends, estimated levels and trial comparisons. You choose which
+              parts to include. It's made on your device and goes only where you send it.
             </p>
           </details>
           <details>
@@ -335,7 +362,8 @@
             <summary>Does Gliplog tell me what dose to take?</summary>
             <p>
               No. It shows the strengths and schedules printed on each medicine's label for
-              reference, and does the arithmetic. Your prescriber decides your dose.
+              reference, and does the arithmetic. Your prescriber decides your dose. The
+              <a href="dosing/">dosing schedules</a> page sets out each label's schedule.
             </p>
           </details>
           <details>
@@ -361,14 +389,15 @@
       <div class="wrap stack">
         <nav aria-label="Footer">
           <a href="app/">Open the app</a>
+          <a href="dosing/">Dosing schedules</a>
           <a href="privacy.html">Privacy policy</a>
           <a href="https://github.com/Gliplog/app" rel="noopener noreferrer">Source code</a>
         </nav>
         <p>
           Gliplog is free software under the GNU AGPL-3.0. It is not medical advice and does not
-          recommend doses. Ozempic, Wegovy, and Rybelsus are trademarks of Novo Nordisk A/S.
-          Mounjaro, Zepbound, and Foundayo are trademarks of Eli Lilly and Company. Gliplog is not
-          affiliated with Novo Nordisk or Eli Lilly.
+          recommend doses. Ozempic, Wegovy, Rybelsus, and Saxenda are trademarks of Novo Nordisk
+          A/S. Mounjaro, Zepbound, and Foundayo are trademarks of Eli Lilly and Company. Gliplog is
+          not affiliated with Novo Nordisk or Eli Lilly.
         </p>
       </div>
     </footer>

@@ -6,11 +6,11 @@ at [gliplog.com/app](https://gliplog.com/app/).
 
 ## What is here
 
-| Path                | Holds                                                       |
-| ------------------- | ----------------------------------------------------------- |
-| `site/`             | The published files: pages, `styles.css`, fonts, images     |
-| `scripts/`          | `check-site.mjs` (the gate) and `serve.mjs` (local preview) |
-| `.github/workflows` | `deploy.yml`: runs the gate and publishes `site/` to Pages  |
+| Path                | Holds                                                                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `site/`             | The published files: pages, `styles.css`, fonts, images                                                                      |
+| `scripts/`          | `check-site.mjs` (the gate), `build-pages.mjs` and `dosing-data.mjs` (dosing pages and sitemap), `serve.mjs` (local preview) |
+| `.github/workflows` | `deploy.yml`: runs the gate and publishes `site/` to Pages                                                                   |
 
 ## Rules
 

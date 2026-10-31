@@ -9,10 +9,12 @@
     "node": ">=24.16.0 <25"
   },
   "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "check:pages": "node scripts/build-pages.mjs --check",
     "check:site": "node scripts/check-site.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run check:site",
+    "check": "npm run format:check && npm run check:pages && npm run check:site",
     "serve": "node scripts/serve.mjs"
   },
   "devDependencies": {

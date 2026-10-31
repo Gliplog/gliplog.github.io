@@ -475,6 +475,11 @@ td {
   overflow-x: auto;
 }
 
+/* A wide comparison scrolls sideways on a phone rather than wrapping a word a line. */
+.table-scroll .table--wide {
+  min-width: 760px;
+}
+
 details {
   border-bottom: 1px solid var(--gl-divider);
   padding: 16px 0;
@@ -531,4 +536,322 @@ details p {
 /* Inline style attributes are blocked by the CSP, so spacing tweaks are classes. */
 .spaced {
   margin-top: 20px;
+}
+
+/* Dosing page */
+.hero--page {
+  padding-bottom: 40px;
+}
+
+/* A page heading is one column, not the home page's text-and-phones grid. */
+.hero.hero--page .wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.lead--wide {
+  max-width: 60ch;
+}
+
+.site-nav a[aria-current='page'] {
+  color: var(--gl-text-1);
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.dosing-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+.dosing-grid--three {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+/* An anchor target lands below the top edge rather than flush against it. */
+.card[id] {
+  scroll-margin-top: 16px;
+}
+
+/*
+ * A dose staircase: one column per dose, the bar's height a share of the chart's highest dose.
+ * Heights are classes because the CSP blocks style attributes. Kind is never colour alone: the
+ * starting dose is hatched and an optional step is outlined and dashed.
+ */
+.ladder {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 6px;
+}
+
+/* Each column shares the ladder's two rows, so bars sit on one baseline however the labels
+   under them wrap. */
+.rung {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  text-align: center;
+}
+
+.rung__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 180px;
+}
+
+.rung__dose {
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.rung__bar {
+  display: block;
+  min-height: 6px;
+  max-height: 150px;
+  border-radius: 8px 8px 2px 2px;
+  background: color-mix(in srgb, var(--gl-brand) 45%, transparent);
+}
+
+.rung__when {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  color: var(--gl-text-2);
+}
+
+/* Fill says whether the label lists a dose for ongoing use; a dashed ring says it is reached
+   only if the prescriber steps up; hatching marks the starting dose. */
+.swatch--step {
+  background: color-mix(in srgb, var(--gl-brand) 45%, transparent);
+}
+
+.rung--keep .rung__bar,
+.swatch--keep {
+  background: var(--gl-brand);
+}
+
+.rung--start .rung__bar,
+.swatch--start {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--gl-brand) 0 3px,
+    var(--gl-brand-soft) 3px 7px
+  );
+}
+
+.rung--option .rung__bar,
+.swatch--option {
+  outline: 2px dashed var(--gl-brand);
+  outline-offset: 2px;
+}
+
+.swatch--option {
+  background: transparent;
+  outline-offset: -1px;
+}
+
+/* Bar heights in 5% steps of 150px, the tallest bar: the CSP blocks style attributes. */
+.h-5 {
+  height: 7.5px;
+}
+
+.h-10 {
+  height: 15px;
+}
+
+.h-15 {
+  height: 22.5px;
+}
+
+.h-20 {
+  height: 30px;
+}
+
+.h-25 {
+  height: 37.5px;
+}
+
+.h-30 {
+  height: 45px;
+}
+
+.h-35 {
+  height: 52.5px;
+}
+
+.h-40 {
+  height: 60px;
+}
+
+.h-45 {
+  height: 67.5px;
+}
+
+.h-50 {
+  height: 75px;
+}
+
+.h-55 {
+  height: 82.5px;
+}
+
+.h-60 {
+  height: 90px;
+}
+
+.h-65 {
+  height: 97.5px;
+}
+
+.h-70 {
+  height: 105px;
+}
+
+.h-75 {
+  height: 112.5px;
+}
+
+.h-80 {
+  height: 120px;
+}
+
+.h-85 {
+  height: 127.5px;
+}
+
+.h-90 {
+  height: 135px;
+}
+
+.h-95 {
+  height: 142.5px;
+}
+
+.h-100 {
+  height: 150px;
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 0.9rem;
+  color: var(--gl-text-2);
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.dose-notes {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  color: var(--gl-text-2);
+  font-size: 0.95rem;
+}
+
+.split--top {
+  align-items: start;
+}
+
+.sources {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+th[scope='row'] {
+  font-weight: 600;
+}
+
+/* A card with its action beside the text on wide screens, below it on a phone. */
+.callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+}
+
+.callout .stack {
+  flex: 1 1 320px;
+  gap: 8px;
+}
+
+.h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.crumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 0.9rem;
+  color: var(--gl-text-2);
+}
+
+.crumbs li + li::before {
+  content: '›';
+  margin-right: 8px;
+  color: var(--gl-text-3);
+}
+
+.crumbs a {
+  color: var(--gl-text-2);
+}
+
+.quick {
+  max-width: 68ch;
+  border-left: 4px solid var(--gl-brand);
+  gap: 8px;
+}
+
+.related {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-weight: 600;
 }
