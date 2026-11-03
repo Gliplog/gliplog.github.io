@@ -321,7 +321,7 @@ ${legend(meds)}
   const body = `<section class="hero hero--page">
 <div class="wrap stack">
 <p class="eyebrow">From the US prescribing information</p>
-<h1>GLP‑1 dosing schedules</h1>
+<h1>GLP-1 dosing schedules</h1>
 <p class="lead lead--wide">Starting doses and step-ups from each medicine's US label. For reference only: your prescriber sets your dose.</p>
 <p class="small muted">Checked against the labels ${CHECKED}</p>
 <nav class="jump" aria-label="On this page">
@@ -376,7 +376,7 @@ ${missed}
 <div class="stack">
 <h2>Compounded semaglutide and tirzepatide</h2>
 <p class="muted">Pharmacy-made vials aren't FDA-approved and have no label. Follow your prescriber and pharmacy.</p>
-<p class="muted">The units to draw depend on your vial's strength in mg per mL. Gliplog works them out for a U‑100 syringe.</p>
+<p class="muted">The units to draw depend on your vial's strength in mg per mL. Gliplog works them out for a U-100 syringe.</p>
 </div>
 <div class="card stack">
 <h3>Log your doses in Gliplog</h3>
@@ -403,7 +403,7 @@ ${sources}
 </div>
 </section>`
   return page({
-    title: 'GLP‑1 dosing schedules: semaglutide, tirzepatide and more · Gliplog',
+    title: 'GLP-1 dosing schedules: semaglutide, tirzepatide and more · Gliplog',
     description:
       'Starting doses, step-ups and missed-dose rules for Wegovy, Ozempic, Rybelsus, Zepbound, Mounjaro, Saxenda and Foundayo, as printed in each US prescribing label.',
     path: '/dosing/',

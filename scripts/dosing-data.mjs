@@ -76,7 +76,7 @@ export const GROUPS = [
     medicines: ['wegovy-tablets', 'rybelsus', 'ozempic-tablets'],
   },
   { id: 'tirzepatide', title: 'Tirzepatide injections', medicines: ['zepbound', 'mounjaro'] },
-  { id: 'other', title: 'Other GLP‑1 medicines', medicines: ['saxenda', 'foundayo'] },
+  { id: 'other', title: 'Other GLP-1 medicines', medicines: ['saxenda', 'foundayo'] },
 ]
 
 export const MEDICINES = [
@@ -121,7 +121,7 @@ export const MEDICINES = [
       'If a step isn’t tolerated, the label suggests considering waiting 4 more weeks before the next one.',
     ],
     missed:
-      'If the next dose is more than 2 days away, take it as soon as possible. If it’s less than 2 days away, skip it and take the next one on the usual day. After 2 or more missed doses in a row, the label says to restart the steps at a lower dose.',
+      "If the next dose is more than 2 days away, take it as soon as possible. If it's less than 2 days away, skip it and take the next one on the usual day. After 2 or more missed doses in a row, the label says to restart the steps at a lower dose.",
     changeDay: 'Inject on the same day each week.',
     faq: [
       {
@@ -521,7 +521,7 @@ export const MEDICINES = [
     ],
     weeksNote: 'Earliest week for each dose, from the first injection',
     maintenance:
-      'The label doesn’t name one ongoing dose. The dose goes up only if more blood sugar control is needed, to at most 15 mg.',
+      "The label doesn't name one ongoing dose. The dose goes up only if more blood sugar control is needed, to at most 15 mg.",
     goodToKnow: [
       'Each increase is 2.5 mg, after at least 4 weeks on the dose before, and only if more blood sugar control is needed.',
     ],
@@ -582,7 +582,7 @@ export const MEDICINES = [
       'The label says to stop Saxenda if 3 mg isn’t tolerated, and to check weight at 16 weeks: it says to stop if weight hasn’t fallen by at least 4%. Your prescriber makes that call with you.',
     ],
     missed:
-      'Carry on with the next scheduled dose; don’t take an extra or larger dose. If more than 3 days have passed since the last dose, the label says to restart at 0.6 mg and step up again.',
+      "Carry on with the next scheduled dose; don't take an extra or larger dose. If more than 3 days have passed since the last dose, the label says to restart at 0.6 mg and step up again.",
     changeDay: null,
     faq: [
       {
@@ -653,7 +653,7 @@ export const MEDICINES = [
       'Take one tablet a day, with or without food. Swallow it whole; don’t break, crush or chew it. Never more than one tablet a day.',
     ],
     missed:
-      'Take it as soon as possible, but don’t double up the next dose. After 7 or more missed doses in a row, the label says to restart at a lower dose.',
+      "Take it as soon as possible, but don't double up the next dose. After 7 or more missed doses in a row, the label says to restart at a lower dose.",
     changeDay: null,
     faq: [
       {
