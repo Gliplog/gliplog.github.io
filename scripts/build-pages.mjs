@@ -157,7 +157,7 @@ const chartNote = (m) =>
 function appCard(m) {
   const points = [
     m.app.catalog
-      ? `Pick a strength from ${esc(m.name)}’s label in a tap`
+      ? `Pick a strength from ${esc(m.name)}'s label in a tap`
       : `Add ${esc(m.name)} by name, with its strength and schedule`,
     'Log each dose and see when the next one is due',
     ...(m.app.levels ? ['See an estimate of the medicine in your body between doses'] : []),
@@ -322,7 +322,7 @@ ${legend(meds)}
 <div class="wrap stack">
 <p class="eyebrow">From the US prescribing information</p>
 <h1>GLP‑1 dosing schedules</h1>
-<p class="lead lead--wide">Starting doses and step-ups from each medicine’s US label. For reference only: your prescriber sets your dose.</p>
+<p class="lead lead--wide">Starting doses and step-ups from each medicine's US label. For reference only: your prescriber sets your dose.</p>
 <p class="small muted">Checked against the labels ${CHECKED}</p>
 <nav class="jump" aria-label="On this page">
 <a href="#at-a-glance">At a glance</a>
@@ -338,11 +338,11 @@ ${GROUPS.map((g) => `<a href="#${g.id}">${esc(g.title)}</a>`).join('\n')}
 <div class="wrap">
 <div class="section-head stack">
 <h2>At a glance</h2>
-<p class="muted">Doses in mg can’t be compared between medicines, or between tablets and injections.</p>
+<p class="muted">Doses in mg can't be compared between medicines, or between tablets and injections.</p>
 </div>
 <div class="table-scroll">
 <table class="table--wide">
-<thead><tr><th scope="col">Medicine</th><th scope="col">How often</th><th scope="col">Starting dose</th><th scope="col">Steps</th><th scope="col">Label’s ongoing doses</th><th scope="col">Highest</th></tr></thead>
+<thead><tr><th scope="col">Medicine</th><th scope="col">How often</th><th scope="col">Starting dose</th><th scope="col">Steps</th><th scope="col">Label's ongoing doses</th><th scope="col">Highest</th></tr></thead>
 <tbody>
 ${glance}
 </tbody>
@@ -375,13 +375,13 @@ ${missed}
 <div class="wrap split split--top">
 <div class="stack">
 <h2>Compounded semaglutide and tirzepatide</h2>
-<p class="muted">Pharmacy-made vials aren’t FDA-approved and have no label. Follow your prescriber and pharmacy; the brand schedules above are a common reference.</p>
-<p class="muted">The units to draw depend on your vial’s strength in mg per mL. Gliplog works them out for a U‑100 syringe.</p>
+<p class="muted">Pharmacy-made vials aren't FDA-approved and have no label. Follow your prescriber and pharmacy.</p>
+<p class="muted">The units to draw depend on your vial's strength in mg per mL. Gliplog works them out for a U‑100 syringe.</p>
 </div>
 <div class="card stack">
 <h3>Log your doses in Gliplog</h3>
 <ul class="checks">
-<li>Pick a strength from your medicine’s label in a tap</li>
+<li>Pick a strength from your medicine's label in a tap</li>
 <li>See when your next dose is due</li>
 <li>Free, private, and offline. Nothing leaves your device.</li>
 </ul>
@@ -399,7 +399,7 @@ ${missed}
 <ul class="sources">
 ${sources}
 </ul>
-<p class="small muted spaced">A summary of each label’s adult dosing, not medical advice. Gliplog never recommends a dose; ask your prescriber or pharmacist.</p>
+<p class="small muted spaced">A summary of each label's adult dosing.</p>
 </div>
 </section>`
   return page({

@@ -521,7 +521,7 @@ export const MEDICINES = [
     ],
     weeksNote: 'Earliest week for each dose, from the first injection',
     maintenance:
-      'The label doesn’t name one ongoing dose: the dose goes up only if more blood sugar control is needed, so any of the doses can be the one someone stays on. 15 mg is the highest dose on the label.',
+      'The label doesn’t name one ongoing dose. The dose goes up only if more blood sugar control is needed, to at most 15 mg.',
     goodToKnow: [
       'Each increase is 2.5 mg, after at least 4 weeks on the dose before, and only if more blood sugar control is needed.',
     ],
