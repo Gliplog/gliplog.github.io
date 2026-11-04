@@ -48,7 +48,7 @@ function head({ title, description, path, type = 'website' }) {
 <meta property="og:image" content="${ORIGIN}/assets/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Gliplog: a private GLP-1 journal" />
+<meta property="og:image:alt" content="The GLP-1 journal that's always free. No paywalls. No subscriptions." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />

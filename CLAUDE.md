@@ -25,6 +25,9 @@ gate on every push and pull request.
 - Colours mirror the app's tokens (`site/styles.css` `:root`), light and dark from the device.
 - Copy follows the app's voice: warm, plain, inclusive, never recommending a dose. Brand names
   appear only to identify medicines, always with the trademark and non-affiliation line.
+- Headlines and marketing copy follow the copy rule: bold, short, no AI slop. Fragments are fine:
+  "Always free. No paywalls. No subscriptions." No trailing ", so X" clauses, no filler subheads.
+  Punchy never overrides accuracy: every claim must be true of the app, and safety wording stays.
 - Markdown and HTML contain no em-dashes (U+2014).
 - Dosing pages are generated: edit `scripts/dosing-data.mjs` (figures only from the DailyMed
   label, section 2, with the label's revision date and `CHECKED` updated), run `make build`,

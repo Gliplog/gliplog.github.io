@@ -12,25 +12,28 @@
       content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'none'; base-uri 'none'; form-action 'none'"
     />
     <meta name="referrer" content="no-referrer" />
-    <title>Gliplog: a private GLP-1 journal</title>
+    <title>Gliplog: a free, open source GLP-1 tracker</title>
     <meta
       name="description"
-      content="A free, private GLP-1 journal that works offline. Log doses, weight, blood sugar, and side effects, and see how your progress compares with the clinical trials."
+      content="Track doses, weight, side effects, and estimated levels. Always free. No paywalls. No subscriptions. Private, offline, and open source."
     />
     <link rel="canonical" href="https://gliplog.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Gliplog" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Gliplog: a private GLP-1 journal" />
+    <meta property="og:title" content="Gliplog: a free, open source GLP-1 tracker" />
     <meta
       property="og:description"
-      content="A free, private GLP-1 journal that works offline. Log doses, weight, blood sugar, and side effects, and see how your progress compares with the clinical trials."
+      content="Track doses, weight, side effects, and estimated levels. Always free. No paywalls. No subscriptions. Private, offline, and open source."
     />
     <meta property="og:url" content="https://gliplog.com/" />
     <meta property="og:image" content="https://gliplog.com/assets/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Gliplog: a private GLP-1 journal" />
+    <meta
+      property="og:image:alt"
+      content="The GLP-1 journal that's always free. No paywalls. No subscriptions."
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
@@ -49,6 +52,7 @@
           <span>Glip<span class="brand__accent">log</span></span>
         </a>
         <nav class="site-nav" aria-label="Site">
+          <a class="optional" href="#free">Free</a>
           <a class="optional" href="#features">Features</a>
           <a class="optional" href="#privacy">Privacy</a>
           <a href="dosing/">Dosing</a>
@@ -59,25 +63,53 @@
     </header>
 
     <main id="main">
-      <section class="hero">
+      <section class="hero hero--stage">
         <div class="wrap">
-          <div class="stack--loose stack">
-            <p class="eyebrow">Free · Private · Offline</p>
-            <h1>A private journal for your GLP‑1 journey</h1>
-            <p class="lead">
-              Log doses, weight, blood sugar, and side effects. See how your progress compares with
-              the clinical trials. Everything stays on your device.
-            </p>
-            <div class="actions">
-              <a class="button button--primary" href="app/">Open Gliplog</a>
-              <a class="button button--quiet" href="#install">Install on your phone</a>
-            </div>
-            <ul class="badges" aria-label="Works with">
-              <li>Brand-name pens and tablets</li>
-              <li>Compounded semaglutide and tirzepatide</li>
-            </ul>
+          <h1>
+            <span class="sr-only"
+              >The GLP‑1 journal that's always free, ad-free, paywall-free, subscription-free,
+              sign-up-free, backed by science, yours to export, open source, private.</span
+            >
+            <span aria-hidden="true"
+              >The GLP‑1 journal that's
+              <span class="odo"
+                ><span class="odo__reel">
+                  <span>always free</span>
+                  <span>ad-free</span>
+                  <span>paywall-free</span>
+                  <span>subscription-free</span>
+                  <span>sign-up-free</span>
+                  <span>backed by science</span>
+                  <span>yours to export</span>
+                  <span>open source</span>
+                  <span>private</span>
+                  <span>always free</span>
+                </span></span
+              ></span
+            >
+          </h1>
+          <p class="lead">
+            Track doses, weight, side effects, and estimated levels. No paywalls. No subscriptions.
+            Ever.
+          </p>
+          <div class="actions">
+            <a class="button button--primary" href="app/">Open Gliplog</a>
+            <a class="button button--quiet" href="#install">Install on your phone</a>
           </div>
-          <div class="phones">
+          <p class="hero__note small">Works with brand-name pens, tablets, and compounded vials.</p>
+          <div class="stage">
+            <picture class="phone">
+              <source
+                srcset="assets/screens/progress-dark.webp"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="assets/screens/progress-light.webp"
+                width="540"
+                height="1099"
+                alt="Gliplog's Progress screen: the change since the first dose, then weight over time"
+              />
+            </picture>
             <picture class="phone">
               <source
                 srcset="assets/screens/today-dark.webp"
@@ -92,133 +124,228 @@
             </picture>
             <picture class="phone">
               <source
-                srcset="assets/screens/progress-dark.webp"
+                srcset="assets/screens/trials-dark.webp"
                 media="(prefers-color-scheme: dark)"
               />
               <img
-                src="assets/screens/progress-light.webp"
+                src="assets/screens/trials-light.webp"
                 width="540"
                 height="1099"
-                alt="Gliplog's Progress screen: the change since the first dose, then weight over time"
+                alt="A trial comparison card: your change at week 19 beside the STEP 1 averages for placebo and semaglutide 2.4 mg at week 68"
               />
             </picture>
           </div>
         </div>
       </section>
 
-      <section id="features" class="section section--band">
+      <section id="free" class="ink">
         <div class="wrap">
-          <div class="section-head stack">
-            <h2>Everything in one place</h2>
-            <p class="muted">Your treatment, your progress, and the science behind it.</p>
+          <div class="stack--loose stack">
+            <p class="ink__zero" aria-hidden="true">$0</p>
+            <h2>Always free. No paywalls. No subscriptions.</h2>
+            <p class="ink__sub">Many apps charge for all of this. We don't.</p>
           </div>
-          <div class="grid">
-            <article class="card">
-              <h3>Doses</h3>
-              <p class="muted">
-                Pick a strength from your medicine's label and see when your next dose is due. For a
-                compounded vial, Gliplog also shows the units to draw on a U-100 syringe.
+          <div class="receipt-wrap">
+            <div class="receipt">
+              <div class="receipt__head">
+                <p class="receipt__name">Gliplog</p>
+                <p class="muted small">Everything included</p>
+              </div>
+              <ul class="receipt__lines">
+                <li><span>No ads</span><span class="receipt__price">$0</span></li>
+                <li>
+                  <span>Estimated medication levels</span><span class="receipt__price">$0</span>
+                </li>
+                <li><span>Charts and trends</span><span class="receipt__price">$0</span></li>
+                <li><span>Trial comparisons</span><span class="receipt__price">$0</span></li>
+                <li><span>PDF progress reports</span><span class="receipt__price">$0</span></li>
+                <li><span>Side effect logging</span><span class="receipt__price">$0</span></li>
+                <li><span>Dose reminders</span><span class="receipt__price">$0</span></li>
+                <li><span>Progress photos</span><span class="receipt__price">$0</span></li>
+                <li><span>Full data backup</span><span class="receipt__price">$0</span></li>
+              </ul>
+              <p class="receipt__total">
+                <span>Total</span><span class="receipt__sum">$0.00</span>
               </p>
-            </article>
-            <article class="card">
-              <h3>Weight and BMI</h3>
-              <p class="muted">
-                Weigh in whenever you like and follow your trend over time. Add your height for BMI,
-                and a goal if you want one.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Blood sugar</h3>
-              <p class="muted">
-                Record HbA1c results and glucose readings, in the units your lab or meter uses, and
-                see how they change.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Side effects</h3>
-              <p class="muted">
-                Note how you feel and how strongly. See which side effects come up most, and how
-                long after a dose they usually appear.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Estimated levels</h3>
-              <p class="muted">
-                See an estimate of how much medicine is in your body between doses, based on its
-                published half-life. Switch brands and the curve carries on.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Trial comparison</h3>
-              <p class="muted">
-                Compare your progress with published results from STEP, SURMOUNT, SURPASS, and other
-                trials, for weight, HbA1c, and fasting glucose.
-              </p>
-            </article>
+              <p class="receipt__renews small">Renews: never</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section id="features" class="section">
         <div class="wrap">
-          <div class="section-head stack">
-            <h2>Made by GLP‑1 users, for&nbsp;GLP‑1&nbsp;users</h2>
-            <p class="muted">
-              The journal we wanted for our own treatment. Export a PDF report for your care team.
-            </p>
+          <div class="section-title">
+            <h2>Track your whole treatment.</h2>
+          </div>
+          <div class="bento">
+            <article class="tile tile--4">
+              <div>
+                <h3>Estimated levels</h3>
+                <p>Estimate what's in your body between doses, from published half-lives.</p>
+              </div>
+              <picture class="tile__shot">
+                <img
+                  src="assets/screens/levels-dark.webp"
+                  width="540"
+                  height="1200"
+                  loading="lazy"
+                  alt="A chart of estimated semaglutide in the body, rising with each weekly dose and falling after the last one"
+                />
+              </picture>
+            </article>
+            <article class="tile tile--2">
+              <div>
+                <h3>Doses</h3>
+                <p>
+                  Label strengths. A countdown to your next dose. Syringe units for compounded
+                  vials.
+                </p>
+              </div>
+              <picture class="tile__shot">
+                <img
+                  src="assets/screens/log-dose.webp"
+                  width="540"
+                  height="1200"
+                  loading="lazy"
+                  alt="The log a dose screen: label strengths for Wegovy, the time, and the injection site"
+                />
+              </picture>
+            </article>
+            <article class="tile tile--2">
+              <div>
+                <h3>Weight and BMI</h3>
+                <p>Your trend, with doses and levels on the same chart.</p>
+              </div>
+              <picture class="tile__shot">
+                <source
+                  srcset="assets/screens/progress-dark.webp"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="assets/screens/progress-light.webp"
+                  width="540"
+                  height="1099"
+                  loading="lazy"
+                  alt="Gliplog's Progress screen with the change since the first dose"
+                />
+              </picture>
+            </article>
+            <article class="tile tile--4">
+              <div>
+                <h3>Trial comparison</h3>
+                <p>
+                  Your progress beside STEP, SURMOUNT, and SURPASS. For weight, HbA1c, and fasting
+                  glucose.
+                </p>
+              </div>
+              <picture class="tile__shot">
+                <img
+                  src="assets/screens/cohort.webp"
+                  width="540"
+                  height="1200"
+                  loading="lazy"
+                  alt="A chart of your weight change beside published semaglutide trial results, by week"
+                />
+              </picture>
+            </article>
+            <article class="tile tile--2 tile--text tile--tint">
+              <div>
+                <h3>Side effects</h3>
+                <p>Log what you feel. See what comes up most, and when.</p>
+              </div>
+            </article>
+            <article class="tile tile--2 tile--text">
+              <div>
+                <h3>Blood sugar</h3>
+                <p>HbA1c and glucose, in your lab's units.</p>
+              </div>
+            </article>
+            <article class="tile tile--2 tile--text tile--tint">
+              <div>
+                <h3>Progress reports</h3>
+                <p>A PDF for your care team. 30 days, 90 days, or everything.</p>
+              </div>
+            </article>
+            <article class="tile tile--3 tile--text">
+              <div>
+                <h3>Reminders</h3>
+                <p>A notification when a dose is due. Or put it on your calendar.</p>
+              </div>
+            </article>
+            <article class="tile tile--3 tile--text">
+              <div>
+                <h3>Progress photos</h3>
+                <p>Only you see them. Compare side by side.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--band">
-        <div class="wrap split">
-          <picture class="phone">
-            <source srcset="assets/screens/trials-dark.webp" media="(prefers-color-scheme: dark)" />
-            <img
-              src="assets/screens/trials-light.webp"
-              width="540"
-              height="1099"
-              loading="lazy"
-              alt="A trial comparison card: your change at week 19 beside the STEP 1 averages for placebo and semaglutide 2.4 mg at week 68"
-            />
-          </picture>
-          <div class="stack">
-            <h2>Backed by science</h2>
-            <p class="muted">Every number in Gliplog comes with its source, one tap away.</p>
-            <ul class="checks">
-              <li>Trial results are copied exactly as printed in each medicine's US label.</li>
-              <li>Where trials are combined on one chart, Gliplog says so.</li>
-              <li>Trial results are group averages. Your results are your own.</li>
-              <li>Gliplog never recommends a dose.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <figure class="photo">
+        <picture>
+          <source srcset="assets/photos/walk-tall.webp" media="(max-width: 719px)" />
+          <img
+            src="assets/photos/walk-wide.webp"
+            width="2000"
+            height="1116"
+            loading="lazy"
+            alt="Two friends laughing on a walk down a tree-lined street in autumn"
+          />
+        </picture>
+      </figure>
 
-      <section id="privacy" class="section">
-        <div class="wrap split">
-          <div class="stack">
-            <h2>Private by design</h2>
-            <p class="muted">
-              No account, no server, and no analytics. Gliplog runs entirely on your device, even
-              offline, and the Android app doesn't request network access.
-            </p>
-            <p class="muted">
-              Your device holds the only copy of your journal. Save a backup in Settings regularly.
-            </p>
-            <p><a href="privacy.html">Read the privacy policy</a></p>
-          </div>
+      <section class="statement section--band">
+        <div class="wrap">
+          <h2>Backed by science.</h2>
+          <p>Every number links to its source.</p>
           <ul class="checks">
-            <li>No sign-up, email, or phone number needed</li>
-            <li>No tracking, ads, or third-party code</li>
-            <li>Works offline after the first visit</li>
-            <li>Free, with no paywall</li>
-            <li>Open source under the AGPL-3.0</li>
+            <li>Trial results copied from each US label</li>
+            <li>Combined trials are labelled</li>
+            <li>Trial results are group averages</li>
+            <li>Gliplog never recommends a dose</li>
           </ul>
         </div>
       </section>
 
-      <section id="medicines" class="section section--band">
+      <section id="about" class="statement">
+        <div class="wrap">
+          <h2>Made by GLP‑1 users. For&nbsp;GLP‑1&nbsp;users.</h2>
+          <p>The journal we wanted. Now it's yours.</p>
+        </div>
+      </section>
+
+      <section id="privacy" class="statement section--band">
+        <div class="wrap">
+          <h2>Your data. On your device.</h2>
+          <p>Not our server. Not our cloud.</p>
+          <ul class="checks">
+            <li>No account</li>
+            <li>No tracking</li>
+            <li>No third-party code</li>
+            <li>Works offline</li>
+            <li>Android app requests no network access</li>
+            <li>Open source under the AGPL-3.0</li>
+          </ul>
+          <p class="statement__more">Your device holds the only copy. Back it up in Settings.</p>
+          <p class="statement__more"><a href="privacy.html">Read the privacy policy</a></p>
+        </div>
+      </section>
+      <figure class="photo">
+        <picture>
+          <source srcset="assets/photos/people-tall.webp" media="(max-width: 719px)" />
+          <img
+            src="assets/photos/people-wide.webp"
+            width="2000"
+            height="1116"
+            loading="lazy"
+            alt="A woman writing in a notebook at her kitchen table, with a mug of tea and her phone face down beside her"
+          />
+        </picture>
+      </figure>
+
+      <section id="medicines" class="section">
         <div class="wrap">
           <div class="section-head stack">
             <h2>Supported medicines</h2>
@@ -264,7 +391,7 @@
         </div>
       </section>
 
-      <section id="install" class="section">
+      <section id="install" class="section section--band">
         <div class="wrap">
           <div class="section-head stack">
             <h2>Install Gliplog</h2>
@@ -308,7 +435,7 @@
         </div>
       </section>
 
-      <section id="faq" class="section section--band">
+      <section id="faq" class="section">
         <div class="wrap">
           <div class="section-head stack">
             <h2>Questions</h2>
@@ -316,8 +443,8 @@
           <details>
             <summary>Is Gliplog really free?</summary>
             <p>
-              Yes. No subscription, no ads, and no premium tier. With no server, it costs almost
-              nothing to run.
+              Yes. Forever. No paywall, no upsell, no subscription, no ads. With no server, it costs
+              almost nothing to run.
             </p>
           </details>
           <details>

@@ -1,0 +1,26 @@
+# Gliplog
+
+> A private journal for GLP-1 medicines: doses, weight, side effects, blood sugar, estimated levels and trial comparisons. Every feature is free forever: no paywall, no upsell, no subscription. Offline, and nothing leaves your device.
+
+Gliplog is a free, open source progressive web app (also an Android app). It runs entirely on
+the device: no account, no server, no analytics, no ads, and it works offline. It does
+arithmetic and shows sourced references; it is not medical advice and never recommends a dose.
+
+## Features
+
+- Doses: strengths from each medicine's label, the next due date, and U-100 syringe units for compounded vials
+- Weight and BMI, with trends over time and doses overlaid
+- HbA1c and glucose, in the units a lab or meter uses
+- Side effects: what, how strongly, and how long after a dose
+- Estimated levels in the body from published half-life data, except for semaglutide tablets
+- Trial comparison: progress beside published averages, copied from each US label
+- A PDF report for the last 30 days, the last 90 days, or everything
+- Dose reminders, progress photos, and a full backup file
+
+## Links
+
+- [Open Gliplog](https://gliplog.com/app/)
+- [About Gliplog](https://gliplog.com/)
+- [Dosing schedules](https://gliplog.com/dosing/)
+- [Privacy policy](https://gliplog.com/privacy.html)
+- [Source code](https://github.com/Gliplog/app)
